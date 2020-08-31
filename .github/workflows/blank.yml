@@ -31,6 +31,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sudo apt-get mysql-server
+          sudo install -y apt-get mysql-server
           mysql -V
           mysql -u root test -e"show tables"
