@@ -31,7 +31,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sudo install -y apt-get mysql-server
+          sudo apt-get install -y mysql-server
           
       - name: install mysql server
         run: |
