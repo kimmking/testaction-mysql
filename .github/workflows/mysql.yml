@@ -40,12 +40,13 @@ jobs:
           ls -al /etc/mysql/mysql.conf.d/
           echo cat /etc/mysql/mysql.conf.d/mysqld.cnf
           cat /etc/mysql/mysql.conf.d/mysqld.cnf
-          sudo echo "[mysqld]" > ~/.mysql.cnf
-          sudo echo "datadir		= /tmp/mydata" >> ~/.mysql.cnf
-          echo sudo mysqld --initialize-insecure --user=mysql --datadir=/tmp/mydata
-          sudo mysqld --initialize-insecure --user=mysql --datadir=/tmp/mydata
-          echo sudo mysqld start --user=mysql --datadir=/tmp/mydata
-          sudo mysqld start --user=mysql --datadir=/tmp/mydata
+          sudo mysqld_safe –-skip-grant-tables
+          #sudo echo "[mysqld]" > ~/.mysql.cnf
+          #sudo echo "datadir		= /tmp/mydata" >> ~/.mysql.cnf
+          #echo sudo mysqld --initialize-insecure --user=mysql --datadir=/tmp/mydata
+          #sudo mysqld --initialize-insecure --user=mysql --datadir=/tmp/mydata
+          #echo sudo mysqld start --user=mysql --datadir=/tmp/mydata
+          #sudo mysqld start --user=mysql --datadir=/tmp/mydata
           
       - name: test mysql server
         run: |
