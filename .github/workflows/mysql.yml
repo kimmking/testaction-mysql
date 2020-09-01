@@ -52,5 +52,6 @@ jobs:
           
       - name: test mysql server
         run: |
-          mysql -V
-          mysql -u root test -e"show tables"
+          ls -al /var/run/mysqld/
+          sudo mysql -V
+          sudo mysql -u root test -e"show tables"
