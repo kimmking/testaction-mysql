@@ -14,19 +14,24 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo /home/runner/work/testaction-mysql/testaction-mysql
 
       - name: install mysql server
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
           sudo apt-get install -y mysql-server
+          
+      - name: start mysql server
+        run: |    
           whereis mysqld
           mysqld -V
+          cd /usr/local/mysql/
+          tree
           sudo mysqld --initialize-insecure
           sudo mysqld start
           
-      - name: install mysql server
+      - name: test mysql server
         run: |
           mysql -V
           mysql -u root test -e"show tables"
