@@ -28,7 +28,7 @@ jobs:
           sudo whereis my.cnf
           sudo mysqld -V
           sudo netstat -antop | grep LISTEN
-          ll /etc/my*
+          ls -al /etc/my*
           cat /etc/my.cnf
           sudo mysqld --initialize-insecure
           sudo mysqld start
