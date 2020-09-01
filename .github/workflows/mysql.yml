@@ -28,8 +28,8 @@ jobs:
           sudo whereis my.cnf
           sudo mysqld -V
           sudo netstat -antop | grep LISTEN
-          sudo cd /usr/local/mysql/
-          sudo tree
+          ll /etc/my*
+          cat /etc/my.cnf
           sudo mysqld --initialize-insecure
           sudo mysqld start
           
