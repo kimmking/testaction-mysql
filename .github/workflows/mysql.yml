@@ -23,6 +23,7 @@ jobs:
           sudo apt-get install -y mysql-server
           whereis mysqld
           mysqld -V
+          sudo mysqld --initialize-insecure
           sudo mysqld start
           
       - name: install mysql server
