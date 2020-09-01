@@ -40,6 +40,8 @@ jobs:
           ls -al /etc/mysql/mysql.conf.d/
           echo cat /etc/mysql/mysql.conf.d/mysqld.cnf
           cat /etc/mysql/mysql.conf.d/mysqld.cnf
+          sudo mkdir -p /var/run/mysqld
+          sudo chown mysql:mysql /var/run/mysqld
           sudo mysqld_safe –-skip-grant-tables
           #sudo echo "[mysqld]" > ~/.mysql.cnf
           #sudo echo "datadir		= /tmp/mydata" >> ~/.mysql.cnf
