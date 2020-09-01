@@ -25,7 +25,9 @@ jobs:
       - name: start mysql server
         run: |    
           whereis mysqld
+          whereis my.cnf
           mysqld -V
+          netstat -antop | grep mysqld
           cd /usr/local/mysql/
           tree
           sudo mysqld --initialize-insecure
