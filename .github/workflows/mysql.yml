@@ -40,6 +40,10 @@ jobs:
           ls -al /etc/mysql/mysql.conf.d/
           echo cat /etc/mysql/mysql.conf.d/mysqld.cnf
           cat /etc/mysql/mysql.conf.d/mysqld.cnf
+          echo "======:>"
+          sudo ls -al /var/lib/mysql
+          sudo rm -rf /var/lib/mysql/ib_logfile0
+          sudo rm -rf /var/lib/mysql/ib_logfile1
           sudo mkdir -p /var/run/mysqld
           sudo chown mysql:mysql /var/run/mysqld
           sudo mysqld_safe –-skip-grant-tables
