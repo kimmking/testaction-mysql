@@ -42,6 +42,8 @@ jobs:
           cat /etc/mysql/mysql.conf.d/mysqld.cnf
           sudo echo "[mysqld]" > ~/.mysql.cnf
           sudo echo "datadir		= /var/lib/mysql" >> ~/.mysql.cnf
+          ls -al /var/lib/mysql
+          sudo rm -rf /var/lib/mysql
           sudo mysqld --initialize-insecure
           sudo mysqld start
           
