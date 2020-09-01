@@ -32,8 +32,10 @@ jobs:
           echo cat /etc/alternatives/my.cnf
           cat /etc/alternatives/my.cnf
           echo cat /etc/mysql.cnf
-          cat /etc/mysql.cnf
-          ls -al /etc/mysql.conf.d
+          echo ls -al /etc/mysql/conf.d
+          ls -al /etc/mysql/conf.d
+          echo ls -al /etc/mysql/mysql.conf.d/
+          ls -al /etc/mysql/mysql.conf.d/
           sudo mysqld --initialize-insecure
           sudo mysqld start
           
