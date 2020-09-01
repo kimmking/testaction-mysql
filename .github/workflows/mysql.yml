@@ -20,7 +20,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sudo apt-get install -y mysql-server
+          echo sudo apt-get install -y mysql-server
           
       - name: start mysql server
         run: |    
@@ -43,7 +43,9 @@ jobs:
           sudo echo "[mysqld]" > ~/.mysql.cnf
           sudo echo "datadir		= /var/lib/mysql" >> ~/.mysql.cnf
           ls -al /var/lib/mysql
+          echo sudo rm -rf /var/lib/mysql
           sudo rm -rf /var/lib/mysql
+          echo sudo mysqld --initialize-insecure
           sudo mysqld --initialize-insecure
           sudo mysqld start
           
