@@ -53,5 +53,6 @@ jobs:
       - name: test mysql server
         run: |
           ls -al /var/run/mysqld/
+          sudo netstat -antop | grep LISTEN
           sudo mysql -V
           sudo mysql -u root test -e"show tables"
