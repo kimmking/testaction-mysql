@@ -29,7 +29,11 @@ jobs:
           sudo mysqld -V
           sudo netstat -antop | grep LISTEN
           ls -al /etc/my*
-          cat /etc/my.cnf
+          echo cat /etc/alternatives/my.cnf
+          cat /etc/alternatives/my.cnf
+          echo cat /etc/mysql.cnf
+          cat /etc/mysql.cnf
+          ls -al /etc/mysql.conf.d
           sudo mysqld --initialize-insecure
           sudo mysqld start
           
